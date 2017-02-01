@@ -67,7 +67,7 @@
     *   
 * Use a form to send a post request
     *   Include a form in ejs file to submit it to the route along with the data
-    *   <form action="/addFriend" method="post">   
+    *  form action="/addFriend" method="post"  
 
 * Use body parser to get form data
     * npm install body-parser --save
