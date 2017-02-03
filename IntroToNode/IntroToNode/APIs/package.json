@@ -1,0 +1,15 @@
+{
+  "name": "moviesearchapp",
+  "version": "1.0.0",
+  "description": "make api requests with node",
+  "main": "first_request_with_node.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pavan Shetty",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.79.0"
+  },
+  "devDependencies": {}
+}
