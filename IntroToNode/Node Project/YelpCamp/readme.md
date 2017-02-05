@@ -24,12 +24,27 @@
 * Add basic unstyled form - Done - [ input type text and button added]
 
 #Style the campgrounds page
-* Add a better header/title
-* Make campgrounds display in a grid
+* Add a better header/title - Done
+    * Make a title look better using jumbotron, use <header>
+* Make campgrounds display in a grid - Done
+    * use the container class to put all together as one group
+    * use the row class to use one complete row of a screen
+    * use the col class to divide the no of the blocks needed in a row
+        * col-lg, col-md, col-sm and no from 1-12.
+    * Use thumbnail class and caption within it for much greater look.  
+    * display:flex; flex-wrap:wrap; is used when you need to have proper grid irrespective of the image size.
 
 #Style the Navbar and Form
-* Add a navbar to all templates
-* Style the new campground form
+* Add a navbar to all templates - Done
+    * pull out from bootstrap page, open components and navbar in it.
+    * use <nav> with class navbar to put all navigation to the page.
+        * use div with containder class to group all things in one place.
+        * use div with navbar-header for the homepage link (navbar-brand for href to Home)
+        * use div with collapse to include the rest of the links.
+        
+* Style the new campground form - Done
+    * use div with form-group for each form tags.
+    * use div with form-control class for each elements
 
 #Add Mongoose
 * Install and configure mongoose
