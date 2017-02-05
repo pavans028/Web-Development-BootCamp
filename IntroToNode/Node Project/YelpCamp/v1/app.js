@@ -13,6 +13,30 @@ var campgrounds = [
     {
         "name":"Michigan",
         "imageURL":"http://www.thingstodointheup.com/wp-content/uploads/2012/08/hurricane-river-shipwreck-sunset.jpg"
+    },
+    {
+        "name":"Pictured Rocks",
+        "imageURL":"http://www.thingstodointheup.com/wp-content/uploads/2012/08/hurricane-river-campsite.jpg"
+    },
+    {
+        "name":"Michigan",
+        "imageURL":"http://www.thingstodointheup.com/wp-content/uploads/2012/08/hurricane-river-shipwreck-sunset.jpg"
+    },
+    {
+        "name":"Pictured Rocks",
+        "imageURL":"http://www.thingstodointheup.com/wp-content/uploads/2012/08/hurricane-river-campsite.jpg"
+    },
+    {
+        "name":"Michigan",
+        "imageURL":"http://www.thingstodointheup.com/wp-content/uploads/2012/08/hurricane-river-shipwreck-sunset.jpg"
+    },
+    {
+        "name":"Pictured Rocks",
+        "imageURL":"http://www.thingstodointheup.com/wp-content/uploads/2012/08/hurricane-river-campsite.jpg"
+    },
+    {
+        "name":"Michigan",
+        "imageURL":"http://www.thingstodointheup.com/wp-content/uploads/2012/08/hurricane-river-shipwreck-sunset.jpg"
     }];
 
 app.get("/", function(req,res){
