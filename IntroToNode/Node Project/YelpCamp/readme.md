@@ -46,7 +46,24 @@
     * use div with form-group for each form tags.
     * use div with form-control class for each elements
 
+
+#V2 - No more static data, database driven
+
 #Add Mongoose
-* Install and configure mongoose
-* Setup campground model
-* Use campground model inside of our routes!
+* Install and configure mongoose -  Done
+    * Notes in mongoDbExercises directory
+* Setup campground model - Done.
+    *   var campground_schema = new mongoose.Schema({
+            name:String,
+            imageURL:String
+        });
+    *   Model for each schemas
+        var Campground = mongoose.model("Campground",campground_schema);
+
+* Use campground model inside of our routes! - Done
+
+#Show Page
+* Review the RESTful routes we've seen so far
+* Add description to our campground model
+* Show db.collection.drop()
+* Add a show route/template
