@@ -71,9 +71,9 @@
 
 #RESTFUL ROUTES
 
-# name      url             verb    desc.
-# ===============================================
-# index   /campgrounds      GET   Display a list of all campgrounds
-# home     /campgrounds/new  GET   Displays form to make a new campground
-# add_new_campground  /campgrounds      POST  Add new campground to DB
-# show_campground    /campgrounds/:id  GET   Shows info about one campground
+* name      url             verb    desc.
+* ===============================================
+* index                 /campgrounds      GET   Display a list of all campgrounds
+* home                  /campgrounds/new  GET   Displays form to make a new campground
+* add_new_campground    /campgrounds      POST  Add new campground to DB
+* show_campground       /campgrounds/:id  GET   Shows info about one campground
