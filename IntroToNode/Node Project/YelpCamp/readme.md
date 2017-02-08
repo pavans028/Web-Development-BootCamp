@@ -63,7 +63,17 @@
 * Use campground model inside of our routes! - Done
 
 #Show Page
-* Review the RESTful routes we've seen so far
-* Add description to our campground model
-* Show db.collection.drop()
-* Add a show route/template
+* Review the RESTful routes we've seen so far - Done
+* Add description to our campground model - (Change the schema) - Done
+* Show db.collection.drop() - Delete all the old data - Done
+* Add a show route/template - Done
+
+
+#RESTFUL ROUTES
+
+# name      url             verb    desc.
+# ===============================================
+# index   /campgrounds      GET   Display a list of all campgrounds
+# home     /campgrounds/new  GET   Displays form to make a new campground
+# add_new_campground  /campgrounds      POST  Add new campground to DB
+# show_campground    /campgrounds/:id  GET   Shows info about one campground
