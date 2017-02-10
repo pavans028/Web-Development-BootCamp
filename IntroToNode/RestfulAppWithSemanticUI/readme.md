@@ -6,7 +6,7 @@
     * Rest is a just a pattern/convention/architecture 
     * and way of mapping http routes and CRUD.
 * List all 7 RESTful routes and Show example of RESTful routing in practice
-    <img src="7 diff rest routes.jpg">
+    <img src="https://github.com/pavans028/Web-Development-BootCamp/blob/master/IntroToNode/RestfulAppWithSemanticUI/7%20diff%20rest%20routes.JPG?raw=true">
     * Index, New, Create, Show, Edit, Update, Destory
 
 ##Semantic UI
