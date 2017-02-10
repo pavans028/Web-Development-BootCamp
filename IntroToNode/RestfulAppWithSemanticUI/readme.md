@@ -67,3 +67,16 @@
     * It is used to filter the script tags used in the input field.
 * Style Index - Done
 * Update REST Table - Done
+
+##Screenshots
+#Index Page
+<img src="https://github.com/pavans028/Web-Development-BootCamp/blob/master/IntroToNode/RestfulAppWithSemanticUI/Web%20App%20Screenshots/IndexPage.PNG?raw=true">
+
+#New Receipe Page
+<img src="https://github.com/pavans028/Web-Development-BootCamp/blob/master/IntroToNode/RestfulAppWithSemanticUI/Web%20App%20Screenshots/NewReceipeForm.PNG?raw=true">
+
+#Edit receipe
+<img src="https://github.com/pavans028/Web-Development-BootCamp/blob/master/IntroToNode/RestfulAppWithSemanticUI/Web%20App%20Screenshots/EditReceipe.PNG?raw=true">
+
+#Show one receipe
+<img src="https://github.com/pavans028/Web-Development-BootCamp/blob/master/IntroToNode/RestfulAppWithSemanticUI/Web%20App%20Screenshots/ShowOneReceipe.PNG?raw=true">
