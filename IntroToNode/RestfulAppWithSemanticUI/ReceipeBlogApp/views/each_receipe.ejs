@@ -1,0 +1,23 @@
+<% include ./partials/header %>
+
+<div class="ui main text container">
+    <div class="ui huge header"><%=each_receipe.title%></div>
+    <div class="ui top attached segment">
+        <div class="item">
+            <img class="ui centered rounded image" src="<%=each_receipe.imageURL%>">    
+            <div class="content">
+                <div>
+                    <span><%=each_receipe.createdOn.toDateString()%></span>      
+                </div>
+                <div class="description">
+                    <p><%- each_receipe.description%></p>    
+                </div>
+            </div>
+        </div>
+        <a class="ui blue basic button" href="/receipes/<%=each_receipe._id%>/edit">Edit</a>            
+        <form id="delete_form" action="/receipes/<%=each_receipe._id%>?_method=DELETE" method="POST">
+            <button class="ui red basic button" type="submit" >Delete</button>
+        </form>
+    </div>
+</div>
+<% include ./partials/footer %>

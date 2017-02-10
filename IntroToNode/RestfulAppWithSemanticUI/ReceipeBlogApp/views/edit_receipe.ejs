@@ -1,0 +1,24 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">
+        Edit your receipe Miss.Asha
+    </div>
+    <form class="ui form" action="/receipes/<%=edit_receipe._id%>?_method=PUT" method="POST">
+        <div class="field">
+            <label>Receipe Title</label>
+            <input type="text" name="receipe[title]" value="<%=edit_receipe.title%>">
+        </div>
+        <div class="field">
+            <label>Receipe Image</label>
+            <input type="text" name="receipe[imageURL]" value="<%=edit_receipe.imageURL%>">
+        </div>
+        <div class="field">
+            <label>Receipe description</label>
+            <textarea name="receipe[description]"><%=edit_receipe.description%></textarea>
+        </div>
+        <input class="ui positive button" type="submit" value="Update">
+    </form>
+</div>
+
+<% include ./partials/footer %>

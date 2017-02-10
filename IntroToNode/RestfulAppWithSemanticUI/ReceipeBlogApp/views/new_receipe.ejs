@@ -1,0 +1,24 @@
+<% include ./partials/header %>
+
+<div class="ui main text container segment">
+    <div class="ui huge header">
+        Post a new receipe Miss Asha
+    </div>
+    <form class="ui form" action="/receipes" method="POST">
+        <div class="field">
+            <label>Receipe Title</label>
+            <input type="text" name="receipe[title]">
+        </div>
+        <div class="field">
+            <label>Receipe Image</label>
+            <input type="text" name="receipe[imageURL]">
+        </div>
+        <div class="field">
+            <label>Receipe description</label>
+            <textarea name="receipe[description]"></textarea>
+        </div>
+        <input class="ui positive button" type="submit">
+    </form>
+</div>
+
+<% include ./partials/footer %>

@@ -1,0 +1,32 @@
+<% include ./partials/header %>
+<div class="ui main text container">
+    <div class="ui huge header">
+        <a href="http://bayiruchi.blogspot.sg/">Welcome to Bayiruchi : My Cook Book</a>
+    </div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% allReceipes.forEach(function(receipe){ %>
+                <div class="item segment">
+                    <div class="image">
+                        <img src="<%=receipe.imageURL%>">
+                    </div>
+                    <div class="content">
+                        <a class="header" href="/receipes/<%=receipe._id%>"><%=receipe.title%></a>
+                        <div class="meta">
+                            <span class="cinema"><%=receipe.createdOn.toDateString()%></span>
+                        </div>
+                        <div class="description">
+                            <p><%- receipe.description.substring(1,100)%>...</p>
+                        </div>
+                        <div class="extra">
+                            <a class="ui floated basic violet button" href="/receipes/<%=receipe._id%>">
+                                Read more.. <i class="right chevron icon"></i>
+                            </a>     
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>    
+    </div>
+</div>
+<% include ./partials/footer %>
