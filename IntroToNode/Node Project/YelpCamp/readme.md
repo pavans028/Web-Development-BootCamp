@@ -77,3 +77,30 @@
 * home                  /campgrounds/new  GET   Displays form to make a new campground
 * add_new_campground    /campgrounds      POST  Add new campground to DB
 * show_campground       /campgrounds/:id  GET   Shows info about one campground
+
+#V3 - Refactor the existing code and Styling
+
+#Refactor Mongoose Code
+* Create a models directory - Done
+* Use module.exports - Done
+* Require everything correctly! - Done
+
+#Add Seeds File
+* Add a initialSeeds.js file - Done
+* Run the seeds file every time the server starts - Done
+
+#Add the Comment model!
+* Make our errors go away! - Done
+* Display comments on campground show page - Done (Using .populate().exec() for show method)
+
+#Comment New/Create
+* Discuss nested routes - "/campgrounds/:id/comments/new" and "/campgrounds/:id/comments" - Done
+* Add the comment new and create routes - Done
+* Add the new comment form - Done
+
+#Style Show Page
+* Add sidebar to show page - Done
+    *  - col-md-9 and col-md-3 and list-group 
+* Display comments nicely - Done 
+    * Made custom css, app.css and placed it in public
+    * app.use(express.static(__dirname+"/public"));
