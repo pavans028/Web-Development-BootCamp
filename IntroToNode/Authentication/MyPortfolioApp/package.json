@@ -1,0 +1,22 @@
+{
+  "name": "myportfolio",
+  "version": "1.0.0",
+  "description": "Which includes details about me",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Pavankumar Shetty",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "ejs": "^2.5.5",
+    "express": "^4.14.1",
+    "express-session": "^1.15.1",
+    "fs": "0.0.1-security",
+    "mongoose": "^4.8.2",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.0.0"
+  }
+}
