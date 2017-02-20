@@ -104,3 +104,82 @@
 * Display comments nicely - Done 
     * Made custom css, app.css and placed it in public
     * app.use(express.static(__dirname+"/public"));
+    * 
+##Finish Styling Show Page
+* Add public directory
+* Add custom stylesheet
+
+##Auth Pt. 1 - Add User Model
+* Install all packages needed for auth - Done
+    * express-session, passport, passport-local, passport-local-mongoose
+* Define User model - Done
+    * models/user
+    * defined userSchema
+    * Model for userSchema
+    * userSchema.plugin("passport-local-mongoose")
+
+##Auth Pt. 2 - Register
+* Configure Passport - Done
+    *   app.use(require("express-session")({
+            secret      : "Secret signs the session ID",
+            resave      :false,
+            saveUninitialized : false
+        }));
+        app.use(passport.initialize());
+        app.use(passport.session());
+        passport.use(new localStrategy(User.authenticate()));
+        passport.serializeUser(User.serializeUser());
+        passport.deserializeUser(User.deserializeUser());
+
+* Add register routes - Done
+    * app.get("/signup", function(req, res) {
+       res.render("signup"); 
+    });
+    app.post("/signup", function(req, res) {
+       var newUser = new User({username:req.body.username});
+       User.register(newUser, req.body.password, function(err, user){
+            if(err){
+                console.log("Something went wrong in signing up!!\n"+err);
+                return res.render("signup");     
+            }
+            passport.authenticate("local")(req, res, function(){
+                res.redirect("/campgrounds");         
+            });
+       });
+    });
+
+* Add register template - Done
+
+##Auth Pt. 3 - Login
+* Add login routes - Done
+    * app.post("/signin", passport.authenticate("local", {
+            successRedirect: "/campgrounds",
+            failureRedirect: "/signin"
+        }), function(req, res){});
+ 
+* Add login template - Done
+
+##Auth Pt. 4 - Logout/Navbar
+* Add logout route - Done
+    * app.get("/signout", function(req, res) {
+        req.logout();
+        res.redirect("/campgrounds");
+      }) 
+* Prevent user from adding a comment if not signed in
+    * Middleware
+    * function isUserLoggedIn(req,res,next){
+            if(req.isAuthenticated()){
+                return next();
+            }
+            res.redirect("/signin");
+        }
+* Add links to navbar - Done
+
+##Auth Pt. 5 - Show/Hide Links
+* Show/hide auth links in navbar correctly - Done
+    * Middleware to pass the user session info thru out the app
+        app.use(function(req,res,next){
+            req.locals.currentUser = req.user;
+            next();
+        }); 
+    * ejs tags to control the visibility
