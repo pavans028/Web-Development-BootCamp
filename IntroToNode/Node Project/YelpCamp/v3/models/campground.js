@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 
 // Make Schemas ready
-var campground_schema = new mongoose.Schema({
+var campgroundSchema = new mongoose.Schema({
     name        :   String,
     imageURL    :   String,
     description :   String,
@@ -12,4 +12,4 @@ var campground_schema = new mongoose.Schema({
 });
 
 // Model for each schemas
-module.exports = mongoose.model("Campground",campground_schema);
+module.exports = mongoose.model("Campground",campgroundSchema);

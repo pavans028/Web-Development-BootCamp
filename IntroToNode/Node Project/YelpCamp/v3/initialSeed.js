@@ -50,7 +50,7 @@ var seedDB = function(){
                                     if(err){
                                         console.log("Something went wrong!!\n"+err);
                                     }else{
-                                        console.log("Added with comments->"+campground);
+                                        //console.log("Added with comments->"+campground);
                                     }
                                 });    
                             }
