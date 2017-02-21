@@ -130,7 +130,7 @@
                 thingsVariable : thing
             });
         });
-    * <h1>You fell in love with: <%= thingsVariable%></h1>
+    * You fell in love with: <%= thingsVariable%>
         <% if(thingsVariable.toLowerCase() === "rusty"){ %>
             <p>RUSTY IS THE BEST !!</p>
         <% } else {%>
