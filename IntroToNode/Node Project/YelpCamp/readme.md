@@ -183,3 +183,100 @@
             next();
         }); 
     * ejs tags to control the visibility
+
+##Refactor The Routes
+* Use Express router to reoragnize all routes - Done
+    * express.Router({mergeParams: true})
+    * make routes as separate folder and move the routing code from app.js
+    * require and use those in app.js
+
+##Users + Comments
+* Associate users and comments - Done
+    * var commentSchema = new mongoose.Schema({
+            text    :   String,
+            author  :   {
+                id:{
+                    type:mongoose.Schema.Types.ObjectId,
+                    ref:"User"
+                }, 
+                username:String
+            }
+        });
+* Save author's name to a comment automatically. - Done
+    *   comment.author.id = req.user._id;
+        comment.author.username = req.user.username;
+        comment.save();
+
+##Users + Campgrounds
+* Prevent an unauthorized user from creating a campground - Done
+    * isUserLoggedIn() - Middleware
+* Save username+id to newly created campground - Done
+    * Same as  comment schema
+
+
+# Editing Campgrounds
+* Add Method-Override - Done
+    * npm install method-override
+    * require("method-override")
+    * app.use(methodOverride("_method"))
+* Add Edit Route for Campgrounds - Done
+    * /campgrounds/:id/edit 
+* Add Link to Edit Page - Done
+    * /campgrounds/:id/?_method=PUT
+* Add Update Route - Done
+    * app.put() - /campgrounds/:id/
+
+#Deleting Campgrounds
+* Add Destroy Route - Done
+    * /campgrounds/:id/?_method=DELETE
+    * app.delete() - /campgrounds/:id/
+* Add Delete button - Done
+
+#Authorization Part 1: Campgrounds
+* User can only edit his/her campgrounds - Done
+    * res.redirect("back"); - previous page
+* User can only delete his/her campgrounds
+* Hide/Show edit and delete buttons - 
+    * <% if(currentUser && campground.author.id.equals(currentUser._id)){%>
+
+#Editing Comments
+* Add Edit route for comments - Done
+* Add Edit button - Done
+* Add Update route - Done
+
+Campground Edit Route: <!--/campgrounds/:id/edit-->
+Comment Edit Route:   <!--/campgrounds/:id/comments/:comment_id/edit-->
+
+#Deleting Comments 
+* Add Destroy route - Done
+* Add Delete button - Done
+
+Campground Destroy Route: /campgrounds/:id
+Comment Destroy Route:    /campgrounds/:id/comments/:comment_id
+
+#Authorization Part 2: Comments
+* User can only edit his/her comments - Done
+* User can only delete his/her comments - Done
+* Hide/Show edit and delete buttons - Done
+* Refactor Middleware - Done
+
+
+#Adding in Flash!
+* Demo working version - Done
+* Install and configure connect-flash - Done
+    * npm install connect-flash --save
+    * add it before redirecting anywhere in the app
+    * req.flash("error","You should be logged in first!"); in middleware
+    * res.render("signin", {message:req.flash("error")}); 
+
+#Add bootstrap alerts to header
+
+* BOOTSTRAP NAV COLLPASE JS - Done
+* Flash Messages - Done
+* Refactor container div to header - Done
+* Show/hide delete and update buttons - Done
+* style login/register forms - Done
+* Random Background Landing Page- Done
+* Refactor middleware - Done
+* change styling in show template - comment delete/update - Done
+* UPDATE/DELETE CAMPGROUND - Done
